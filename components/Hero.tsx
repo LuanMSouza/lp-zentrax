@@ -47,7 +47,7 @@ export default function Hero() {
                                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
                                 <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
                                 <div className="ml-4 bg-slate-700/50 rounded text-[10px] px-3 py-1 text-slate-400 font-mono">
-                                    zentrax.dvls.com.br
+                                    app.zentrax.dvls.com.br
                                 </div>
                             </div>
 
