@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { registrarEmpresa } from "./actions";
 import Image from "next/image";
-import { Building2, User, ShieldCheck, ArrowRight, Loader2 } from "lucide-react";
+import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog } from "lucide-react";
 
 export default function PageCadastro() {
     const [loading, setLoading] = useState(false);
@@ -24,14 +24,13 @@ export default function PageCadastro() {
 
     return (
         <div className="min-h-screen bg-[#001529] flex items-center justify-center p-4 relative overflow-hidden">
-            {/* Background Decorativo - Efeito de luzes SaaS */}
+            {/* Background Decorativo */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]" />
             </div>
 
             <div className="w-full max-w-[450px] relative z-10">
-                {/* Header do Formulário */}
                 <div className="text-center mb-8">
                     <div className="inline-block p-3 bg-white/5 rounded-2xl border border-white/10 mb-4 backdrop-blur-sm">
                         <Image src="/Logo.png" alt="ZentraX" width={48} height={48} priority />
@@ -42,7 +41,6 @@ export default function PageCadastro() {
                     <p className="text-slate-400 mt-2">7 dias grátis • Sem cartão de crédito</p>
                 </div>
 
-                {/* Card do Formulário */}
                 <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden">
                     <div className="p-8">
                         {erro && (
@@ -52,6 +50,7 @@ export default function PageCadastro() {
                         )}
 
                         <form action={clientAction} className="space-y-5">
+                            
                             {/* Input Empresa */}
                             <div className="space-y-1">
                                 <label className="text-xs font-bold text-slate-500 uppercase ml-1">Dados da Loja</label>
@@ -63,6 +62,21 @@ export default function PageCadastro() {
                                         required
                                         className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 transition-all"
                                     />
+                                </div>
+                            </div>
+
+                            {/* NOVO: Seletor de Módulo Pet */}
+                            <div className="space-y-1">
+                                <label className="text-xs font-bold text-slate-500 uppercase ml-1">Segmento do Negócio</label>
+                                <div className="relative">
+                                    <Dog className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                                    <select 
+                                        name="modulo_pet"
+                                        className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 appearance-none cursor-pointer transition-all"
+                                    >
+                                        <option value="false">Padrão (Vendas em Geral)</option>
+                                        <option value="true">Módulo Pet (Creche, Hotel e Banho) 🐾</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -122,7 +136,6 @@ export default function PageCadastro() {
                         </form>
                     </div>
 
-                    {/* Rodapé do Card */}
                     <div className="bg-slate-50 p-6 border-t border-slate-100 text-center">
                         <p className="text-sm text-slate-500">
                             Já tem uma conta? <a href="https://app.zentrax.dvls.com.br" className="text-cyan-600 font-bold hover:underline">Fazer login</a>
@@ -130,7 +143,6 @@ export default function PageCadastro() {
                     </div>
                 </div>
 
-                {/* Footer externo */}
                 <p className="text-center text-slate-500 text-xs mt-8">
                     Ao criar sua conta, você concorda com nossos termos de uso. <br />
                     Desenvolvido com foco na sua privacidade.

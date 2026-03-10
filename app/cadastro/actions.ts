@@ -7,6 +7,8 @@ export async function registrarEmpresa(formData: FormData) {
     const usuario = formData.get("usuario");
     const senha = formData.get("senha");
 
+    const moduloPet = formData.get("modulo_pet") === "true";
+
     try {
         const response = await fetch("https://api.devedores.dvls.com.br/adm/onboarding-publico", {
             method: "POST",
@@ -18,6 +20,8 @@ export async function registrarEmpresa(formData: FormData) {
                 nomeResponsavel,
                 usuario,
                 senha,
+                // Repassando a flag para a API configurar o dashboard correto
+                modulo_pet: moduloPet,
             }),
         });
 
@@ -29,7 +33,7 @@ export async function registrarEmpresa(formData: FormData) {
 
         return { success: true };
     } catch (error) {
-        console.log(error)
+        console.log(error);
         return { error: "Erro de conexão com o servidor." };
     }
 }
