@@ -50,7 +50,7 @@ export default function PageCadastro() {
                         )}
 
                         <form action={clientAction} className="space-y-5">
-                            
+
                             {/* Input Empresa */}
                             <div className="space-y-1">
                                 <label className="text-xs font-bold text-slate-500 uppercase ml-1">Dados da Loja</label>
@@ -70,12 +70,12 @@ export default function PageCadastro() {
                                 <label className="text-xs font-bold text-slate-500 uppercase ml-1">Segmento do Negócio</label>
                                 <div className="relative">
                                     <Dog className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                                    <select 
-                                        name="modulo_pet"
+                                    <select
+                                        name="segmento"
                                         className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 appearance-none cursor-pointer transition-all"
                                     >
-                                        <option value="false">Padrão (Vendas em Geral)</option>
-                                        <option value="true">Módulo Pet (Creche, Hotel e Banho) 🐾</option>
+                                        <option value="geral">Padrão (Vendas em Geral)</option>
+                                        <option value="pet">Módulo Pet (Creche, Hotel e Banho) 🐾</option>
                                     </select>
                                 </div>
                             </div>

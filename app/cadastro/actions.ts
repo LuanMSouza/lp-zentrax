@@ -7,7 +7,7 @@ export async function registrarEmpresa(formData: FormData) {
     const usuario = formData.get("usuario");
     const senha = formData.get("senha");
 
-    const moduloPet = formData.get("modulo_pet") === "true";
+    const segmento = formData.get("segmento");
 
     try {
         const response = await fetch("https://api.devedores.dvls.com.br/adm/onboarding-publico", {
@@ -20,8 +20,7 @@ export async function registrarEmpresa(formData: FormData) {
                 nomeResponsavel,
                 usuario,
                 senha,
-                // Repassando a flag para a API configurar o dashboard correto
-                modulo_pet: moduloPet,
+                segmento,
             }),
         });
 
