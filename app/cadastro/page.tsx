@@ -42,10 +42,15 @@ export default function PageCadastro() {
                 </div>
 
                 <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden">
+
                     <div className="p-8">
                         {erro && (
-                            <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded-md mb-6 text-sm flex items-center gap-3">
-                                <span>{erro}</span>
+                            <div className="bg-amber-50 border-l-4 border-amber-500 text-amber-800 p-4 rounded-xl mb-6 text-sm flex items-center gap-3 animate-pulse">
+                                <ShieldCheck className="text-amber-500" size={20} />
+                                <div className="flex flex-col">
+                                    <span className="font-bold">Não foi possível avançar:</span>
+                                    <span>{erro}</span>
+                                </div>
                             </div>
                         )}
 
