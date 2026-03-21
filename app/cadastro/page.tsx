@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
 import Image from "next/image";
 import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog } from "lucide-react";
@@ -7,6 +7,44 @@ import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog } from "lucide-r
 export default function PageCadastro() {
     const [loading, setLoading] = useState(false);
     const [erro, setErro] = useState("");
+
+    // 
+
+    const trackAccess = () => {
+        const params = new URLSearchParams(window.location.search);
+
+        const payload = JSON.stringify({
+            projeto_nome: 'ZentraX-Cadastro',
+            pagina_path: window.location.pathname,
+            url_completa: window.location.href,
+            referrer: document.referrer || 'direto',
+            utm_source: params.get('utm_source') || null,
+            utm_medium: params.get('utm_medium') || null,
+            largura_tela: window.innerWidth,
+            idioma: navigator.language,
+            user_agent: navigator.userAgent,
+        });
+
+        const url = "https://api.analitcs.dvls.com.br/api/track";
+
+        if (navigator.sendBeacon) {
+            const blob = new Blob([payload], { type: 'application/json' });
+            navigator.sendBeacon(url, blob);
+        } else {
+            fetch(url, {
+                method: 'POST',
+                body: payload,
+                headers: { 'Content-Type': 'application/json' },
+                keepalive: true // Garante que a requisição termine mesmo se sair da página
+            }).catch(() => { }); // Falha silenciosa
+        }
+    };
+
+    useEffect(() => {
+        trackAccess()
+    }, [])
+
+    // 
 
     async function clientAction(formData: FormData) {
         setLoading(true);
