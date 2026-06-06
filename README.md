@@ -1,19 +1,45 @@
+<div align="center">
+
 # Zentrax — Landing Page
 
 Landing page de apresentação da plataforma Zentrax.
 
-## Tecnologias
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-- TypeScript · JavaScript (Next.js / Vite)
-- CSS
+</div>
 
-## Como Rodar
+---
+
+## 📋 Sobre
+
+Landing page do Zentrax com apresentação dos recursos da plataforma, planos disponíveis e call to action para conversão.
+
+## 🚀 Como Rodar
+
+**Pré-requisitos:** Node.js 18+
 
 ```bash
+git clone https://github.com/LuanMSouza/lp-zentrax
+cd lp-zentrax
 npm install
 npm run dev
 ```
 
-## Repositórios Relacionados
+Acesse [http://localhost:3000](http://localhost:3000).
 
-- [zentrax-front](https://github.com/LuanMSouza/zentrax-front) — Plataforma completa
+## 🔗 Repositórios do Projeto
+
+| Repositório | Descrição |
+|---|---|
+| [zentrax-front](https://github.com/LuanMSouza/zentrax-front) | Plataforma completa |
+| [zentrax-back](https://github.com/LuanMSouza/zentrax-back) | API REST |
+
+---
+
+<p align="center">
+  Feito por <a href="https://github.com/LuanMSouza"><b>Luan Souza</b></a> •
+  <a href="https://luansouzadev.com.br">luansouzadev.com.br</a>
+</p>
