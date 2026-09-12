@@ -38,7 +38,7 @@ export default function Footer() {
                         <h3 className="text-white font-bold mb-4">Suporte</h3>
                         <ul className="space-y-2 text-sm text-slate-400">
                             <li><a href="https://wa.me/5513998087787" className="hover:text-cyan-400 transition-colors">Central de Ajuda</a></li>
-                            <li><a href="mailto:luan.soya@gmail.com.br" className="hover:text-cyan-400 transition-colors">E-mail</a></li>
+                            <li><a href="mailto:luan@dvls.com.br" className="hover:text-cyan-400 transition-colors">E-mail</a></li>
                             <li className="text-xs italic text-slate-500">Atendimento seg à sex, 09h às 18h</li>
                         </ul>
                     </div>
