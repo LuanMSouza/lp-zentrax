@@ -67,11 +67,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "price": "0",
       "priceCurrency": "BRL",
       "description": "Teste grátis por 7 dias"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "120"
     }
   };
 
