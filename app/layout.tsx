@@ -14,6 +14,7 @@ export const viewport: Viewport = {
 
 // 2. Metadata Robusta
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zentrax.dvls.com.br"),
   title: {
     default: "ZentraX | Gestão de Cobrança e Controle de Devedores",
     template: "%s | ZentraX"
