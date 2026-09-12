@@ -1,4 +1,4 @@
-import { MessageSquare, LayoutDashboard, History, CheckCircle, Users, ShieldCheck } from 'lucide-react';
+import { MessageSquare, LayoutDashboard, History, CheckCircle, Users } from 'lucide-react';
 
 interface FeatureProps {
     icon: React.ReactNode;
@@ -41,12 +41,7 @@ export default function Features() {
         {
             icon: <Users size={24} />,
             title: "Multi-Usuários",
-            description: "Perfis de Gestor e Administrador. Controle permissões e veja quem da sua equipe está operando o sistema."
-        },
-        {
-            icon: <ShieldCheck size={24} />,
-            title: "Contas Futuras",
-            description: "Além de receber, organize seus pagamentos internos com o módulo de contas a pagar integrado."
+            description: "Perfis de Gestor e Usuário. Controle permissões e veja quem da sua equipe está operando o sistema."
         }
     ];
 
