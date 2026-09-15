@@ -68,6 +68,8 @@ export default function Footer() {
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-xs">
                         © 2026 ZentraX - Todos os direitos reservados.
+                        <br />
+                        LUAN MACHADO DE SOUZA — CNPJ 52.215.708/0001-63
                     </p>
                     <div className="flex gap-6 text-xs text-slate-500 font-medium">
                         <Link href="/termos" className="hover:text-slate-300">Termos de Uso</Link>
