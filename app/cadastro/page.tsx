@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
 import Image from "next/image";
-import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail } from "lucide-react";
+import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail, Tag } from "lucide-react";
 
 export default function PageCadastro() {
     const [loading, setLoading] = useState(false);
     const [erro, setErro] = useState("");
+    const [segmento, setSegmento] = useState("geral");
 
     // 
 
@@ -112,9 +113,15 @@ export default function PageCadastro() {
                             <div className="space-y-1">
                                 <label className="text-xs font-bold text-slate-500 uppercase ml-1">Segmento do Negócio</label>
                                 <div className="relative">
-                                    <Dog className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                                    {segmento === "pet" ? (
+                                        <Dog className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                                    ) : (
+                                        <Tag className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                                    )}
                                     <select
                                         name="segmento"
+                                        value={segmento}
+                                        onChange={(e) => setSegmento(e.target.value)}
                                         className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 appearance-none cursor-pointer transition-all"
                                     >
                                         <option value="geral">Padrão (Vendas em Geral)</option>
