@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
 import Image from "next/image";
-import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog } from "lucide-react";
+import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail } from "lucide-react";
 
 export default function PageCadastro() {
     const [loading, setLoading] = useState(false);
@@ -149,6 +149,16 @@ export default function PageCadastro() {
                                         required
                                         className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 transition-all"
                                     />
+                                    <div className="relative">
+                                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                                        <input
+                                            name="email"
+                                            type="email"
+                                            placeholder="Seu melhor e-mail"
+                                            required
+                                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 transition-all"
+                                        />
+                                    </div>
                                     <div className="relative">
                                         <ShieldCheck className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
                                         <input

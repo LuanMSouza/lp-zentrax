@@ -5,6 +5,7 @@ export async function registrarEmpresa(formData: FormData) {
     const nome = formData.get("nome");
     const nomeResponsavel = formData.get("nomeResponsavel");
     const usuario = formData.get("usuario");
+    const email = formData.get("email");
     const senha = formData.get("senha");
 
     const segmento = formData.get("segmento");
@@ -19,6 +20,7 @@ export async function registrarEmpresa(formData: FormData) {
                 nome,
                 nomeResponsavel,
                 usuario,
+                email,
                 senha,
                 segmento,
             }),
