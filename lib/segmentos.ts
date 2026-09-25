@@ -59,6 +59,15 @@ export const SEGMENTOS: Segmento[] = [
     { slug: "coach", descricao: "Mentorias e programas pagos em parcelas: veja quem está em dia, quem atrasou e cobre pelo WhatsApp sem perder o clima. Teste grátis por 7 dias.", plural: "coaches e consultores", quem: "coach",
       dor: "programas e mentorias pagos em parcelas, com aluno que atrasa e uma cobrança que parece desconfortável.",
       exemplos: ["Programa de 6 meses com parcelas mensais", "Aluno que atrasa e você adia a cobrança para não gerar climão", "Pacote de sessões avulsas com saldo a receber"] },
+    { slug: "beleza-e-estetica", descricao: "Pacotes de sessões, procedimentos com sinal e saldo e clientes fixas sob controle no seu estúdio de beleza, com cobrança pelo WhatsApp. Teste grátis por 7 dias.", plural: "estúdios de beleza e estética", quem: "profissional de beleza",
+      dor: "pacotes de sessões pagos em partes, procedimento com sinal e saldo e cliente fixa que acerta só no fim do mês.",
+      exemplos: ["Pacote de sessões parcelado em que ninguém sabe quantas faltam", "Procedimento com sinal pago e saldo esquecido", "Cliente fixa que junta vários atendimentos para pagar depois"] },
+    { slug: "servicos-sob-encomenda", descricao: "Orçamento aprovado com sinal e saldo na entrega: controle o que cada cliente já pagou e o que falta receber. Teste grátis por 7 dias, sem cartão.", plural: "marcenarias, vidraçarias e serviços sob encomenda", quem: "dono de negócio sob encomenda",
+      dor: "orçamento aprovado com sinal, saldo na entrega e cliente que atrasa o restante depois do serviço pronto.",
+      exemplos: ["Serviço entregue com a última parcela em aberto", "Vários orçamentos com sinal e saldo ao mesmo tempo", "Cliente de empresa que paga só depois de 15 ou 30 dias"] },
+    { slug: "gastronomia", descricao: "Encomendas com sinal, clientes fixos e empresas que pagam no fim do mês: controle o que cada cliente deve na sua doceria ou restaurante. Teste grátis por 7 dias.", plural: "docerias, restaurantes e pizzarias", quem: "dono de negócio de alimentação",
+      dor: "encomendas com sinal, clientes fixos que pagam depois e empresas que pedem para acertar no fim do mês.",
+      exemplos: ["Encomenda de festa com sinal pago e saldo a receber", "Cliente de empresa com pedidos somados no mês", "Cliente de confiança que leva agora e paga na próxima semana"] },
 ];
 
 export const pegarSegmento = (slug: string) => SEGMENTOS.find(s => s.slug === slug);
