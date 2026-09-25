@@ -6,7 +6,7 @@
 const NUMEROS = [
     { valor: "+1.500", rotulo: "notas de fiado registradas" },
     { valor: "+1.200", rotulo: "pagamentos com baixa" },
-    { valor: "Desde 2024", rotulo: "em uso diário num comércio real" },
+    { valor: "Desde 2024", rotulo: "em uso real, todos os dias" },
 ];
 
 export default function ProvaSocial() {
