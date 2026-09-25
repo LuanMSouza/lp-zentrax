@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { SEGMENTOS } from '@/lib/segmentos';
 
 export default function Footer() {
     return (
@@ -62,6 +63,19 @@ export default function Footer() {
                             </span>
                         </div>
                     </div>
+                </div>
+
+                {/* Para o seu negócio: links internos pras páginas de segmento (SEO) */}
+                <div className="mb-12 pt-8 border-t border-white/5">
+                    <h3 className="text-white font-bold mb-4 text-sm">Para o seu negócio</h3>
+                    <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400">
+                        {SEGMENTOS.map(s => (
+                            <li key={s.slug}>
+                                <Link href={`/para/${s.slug}`} className="inline-block hover:text-cyan-400 transition-colors first-letter:uppercase">{s.plural}</Link>
+                            </li>
+                        ))}
+                        <li><Link href="/calculadora-fiado" className="hover:text-cyan-400 transition-colors">Calculadora do fiado</Link></li>
+                    </ul>
                 </div>
 
                 {/* Linha Final: Copyright */}

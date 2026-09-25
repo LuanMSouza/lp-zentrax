@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Track from "@/components/Track";
+import CtaCadastro from "@/components/CtaCadastro";
 import { SEGMENTOS, pegarSegmento } from "@/lib/segmentos";
 
 export const dynamicParams = false;
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ segmento:
     const s = pegarSegmento((await params).segmento);
     if (!s) return {};
     const titulo = `Controle de fiado para ${s.plural} | ZentraX`;
-    const descricao = `Acabe com o caderninho: controle o que cada cliente deve, receba lembretes de cobrança e cobre pelo WhatsApp. Teste grátis por 7 dias, sem cartão.`;
+    const descricao = s.descricao;
     return {
         title: titulo,
         description: descricao,
@@ -42,9 +43,9 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                     <p className="text-lg text-slate-200 mb-10">
                         No dia a dia de {s.plural}, o fiado costuma ser {s.dor} O ZentraX mostra quanto cada cliente deve, quando vence e permite cobrar pelo WhatsApp em segundos.
                     </p>
-                    <Link href={cta} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
+                    <CtaCadastro hrefBase={cta} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
                         Começar teste grátis de 7 dias
-                    </Link>
+                    </CtaCadastro>
                     <p className="text-sm text-slate-300 mt-3">Sem cartão de crédito e sem compromisso.</p>
                 </div>
             </section>
@@ -71,9 +72,9 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                         <Link href="/calculadora-fiado?utm_source=seo" className="text-[#004b6b] font-semibold underline">Use a calculadora do fiado</Link>
                     </div>
 
-                    <Link href={cta} className="inline-block bg-[#004b6b] text-white hover:bg-[#003a54] font-bold py-4 px-8 rounded-xl transition-all">
+                    <CtaCadastro hrefBase={cta} className="inline-block bg-[#004b6b] text-white hover:bg-[#003a54] font-bold py-4 px-8 rounded-xl transition-all">
                         Testar o ZentraX grátis
-                    </Link>
+                    </CtaCadastro>
                 </div>
             </section>
             <Footer />
