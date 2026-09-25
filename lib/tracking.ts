@@ -36,6 +36,8 @@ export function track(projeto: string) {
         referrer: document.referrer || "direto",
         utm_source: params.get("utm_source") || null,
         utm_medium: params.get("utm_medium") || null,
+        // campanha (ex.: slug da página de segmento no SEO) — permite atribuir cada cadastro à página de origem
+        utm_campaign: params.get("utm_campaign") || null,
         lid: getLid(),
         largura_tela: window.innerWidth,
         idioma: navigator.language,
