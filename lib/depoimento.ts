@@ -1,6 +1,8 @@
-// Depoimento de cliente real para a home. Deixe `null` até ter um texto autorizado por quem o deu:
-// a seção some sozinha quando está vazio (não inventamos depoimento nem número).
+// Depoimento de cliente real para a home. Autorizado por quem o deu (lojista que usa o ZentraX desde 2024, frase que ele
+// mesmo repete). Deixe `null` para esconder a seção; ela some sozinha quando está vazio (não inventamos depoimento).
 export type Depoimento = { texto: string; nome: string; negocio: string };
-export const DEPOIMENTO: Depoimento | null = null;
-// exemplo do formato:
-// export const DEPOIMENTO: Depoimento = { texto: "Uso todo dia e não voltei pro caderninho.", nome: "Nome", negocio: "Tipo de negócio" };
+export const DEPOIMENTO: Depoimento | null = {
+    texto: "Antes eu anotava tudo à mão e perdia o controle. Agora está tudo num lugar só e eu cobro pelo WhatsApp com a mensagem pronta.",
+    nome: "Lojista",
+    negocio: "cliente desde 2024",
+};
