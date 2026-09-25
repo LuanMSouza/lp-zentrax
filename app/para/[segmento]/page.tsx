@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Track from "@/components/Track";
+import Nav from "@/components/Nav";
 import CtaCadastro from "@/components/CtaCadastro";
 import { SEGMENTOS, pegarSegmento } from "@/lib/segmentos";
 
@@ -32,6 +33,7 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
     return (
         <>
             <Track />
+            <Nav />
             <section className="bg-[#004b6b] text-white">
                 <div className="max-w-3xl mx-auto px-6 py-20 lg:py-28">
                     <span className="inline-block px-4 py-1 rounded-full bg-cyan-400/20 text-cyan-300 text-sm font-semibold mb-6">

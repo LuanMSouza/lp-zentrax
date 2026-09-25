@@ -50,7 +50,11 @@ export const metadata: Metadata = {
     siteName: "ZentraX",
     locale: "pt_BR",
     type: "website",
-    images: [{ url: "/icon.png", width: 500, height: 500, alt: "ZentraX Logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ZentraX - O fim do caderninho de cobrança chegou",
+    description: "Sua loja organizada e suas cobranças no automático via WhatsApp.",
   },
 };
 
@@ -64,9 +68,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "applicationCategory": "BusinessApplication",
     "offers": {
       "@type": "Offer",
-      "price": "0",
+      "price": "49.00",
       "priceCurrency": "BRL",
-      "description": "Teste grátis por 7 dias"
+      "description": "R$ 49 por mês, com 7 dias de teste grátis"
     }
   };
 

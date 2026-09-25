@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
-/* Se você quiser garantir que o fundo ocupe a tela toda sem margens */
+html {
+  scroll-behavior: smooth;
+}
 
 html, body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  /* Geist é carregada no layout; antes esta linha forçava sans-serif e a fonte nunca era usada */
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

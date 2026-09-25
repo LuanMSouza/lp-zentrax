@@ -1,5 +1,6 @@
 // components/Hero.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -10,28 +11,26 @@ export default function Hero() {
             {/* Ajustamos o padding inferior (pb-32) para dar espaço para a imagem "vazar" */}
             <div className="max-w-7xl mx-auto px-6 pt-20 pb-32 lg:pt-32 lg:pb-48 flex flex-col lg:flex-row items-center gap-12 relative z-10">
                 <div className="flex-1 text-center lg:text-left">
-                    <span className="inline-block px-4 py-1 rounded-full bg-cyan-400/20 text-cyan-300 text-sm font-semibold mb-6">
-                        O fim do caderninho chegou!
+                    <span className="inline-block px-4 py-1 rounded-full bg-cyan-400/15 text-cyan-300 text-sm font-medium mb-6">
+                        Para quem vende fiado
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-                        Gestão de Cobrança <br />
-                        <span className="text-cyan-400">Inteligente para sua Loja</span>
+                    <h1 className="text-4xl md:text-6xl font-semibold leading-[1.05] mb-6 tracking-tight">
+                        Chega de caderninho.<br />
+                        <span className="text-cyan-400 block text-balance">Saiba quem te deve e quanto.</span>
                     </h1>
-                    <p className="text-lg text-slate-200 mb-10 max-w-xl mx-auto lg:mx-0">
-                        Abandone o papel e a calculadora. Com o ZentraX, você controla clientes devedores, automatiza baixas e cobra pelo WhatsApp em segundos.
+                    <p className="text-lg text-slate-200 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Cadastre o cliente, lance as notas e cobre pelo WhatsApp com a mensagem pronta. Quando pagarem, dê baixa, inclusive parcial.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href='/cadastro' className="bg-white cursor-pointer text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:scale-105">
-                            Começar Teste Grátis
-                        </a>
-                        <a
-                            href="#como-funciona" // Âncoras para a seção de passos que criamos
-                            className="border border-white/30 hover:bg-white/10 font-medium py-4 px-8 rounded-xl transition-all text-center"
-                        >
-                            Ver Demonstração
+                    <div className="flex flex-col sm:flex-row gap-x-6 gap-y-4 items-center justify-center lg:justify-start">
+                        <Link href="/cadastro" className="bg-white text-[#004b6b] hover:bg-cyan-50 active:scale-[0.98] font-semibold py-4 px-8 rounded-xl transition-all shadow-lg shadow-black/20">
+                            Testar 7 dias grátis
+                        </Link>
+                        <a href="#como-funciona" className="text-slate-200 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors">
+                            Ver como funciona
                         </a>
                     </div>
+                    <p className="text-sm text-slate-300/80 mt-4">Sem cartão de crédito. Cancele quando quiser.</p>
                 </div>
 
                 {/* A Mágica do Overflow está aqui */}
