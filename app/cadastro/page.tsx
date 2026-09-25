@@ -47,7 +47,7 @@ export default function PageCadastro() {
                     <h1 className="text-3xl font-extrabold text-white tracking-tight">
                         Comece sua jornada <span className="text-cyan-400">ZentraX</span>
                     </h1>
-                    <p className="text-slate-400 mt-2">7 dias grátis • Sem cartão de crédito</p>
+                    <p className="text-slate-400 mt-2">14 dias grátis • Sem cartão de crédito</p>
                 </div>
 
                 <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden">
@@ -150,6 +150,18 @@ export default function PageCadastro() {
                                 </div>
                             </div>
 
+                            <div className="space-y-1">
+                                <label className="text-xs font-bold text-slate-500 uppercase ml-1">WhatsApp (opcional)</label>
+                                <input
+                                    name="whatsapp"
+                                    type="tel"
+                                    inputMode="tel"
+                                    autoComplete="tel"
+                                    placeholder="(13) 99999-9999"
+                                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 transition-all"
+                                />
+                                <p className="text-xs text-slate-400 ml-1">Para te ajudar a começar. Não enviamos propaganda por aqui.</p>
+                            </div>
                             <input type="hidden" name="ref" value={ref} />
                             <p className="text-xs text-slate-400 text-center">
                                 Se você não terminar o cadastro, enviaremos um único lembrete por e-mail.

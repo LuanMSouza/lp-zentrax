@@ -46,7 +46,7 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                         No dia a dia de {s.plural}, o fiado costuma ser {s.dor} O ZentraX mostra quanto cada cliente deve, quando vence e permite cobrar pelo WhatsApp em segundos.
                     </p>
                     <CtaCadastro hrefBase={cta} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
-                        Começar teste grátis de 7 dias
+                        Começar teste grátis de 14 dias
                     </CtaCadastro>
                     <p className="text-sm text-slate-300 mt-3">Sem cartão de crédito e sem compromisso.</p>
                 </div>

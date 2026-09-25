@@ -51,7 +51,7 @@ export default function CalculadoraFiado() {
 
                     <Link href="/cadastro?utm_source=calculadora&utm_medium=organico&utm_campaign=calculadora_fiado"
                         className="block text-center bg-[#004b6b] text-white hover:bg-[#003a54] font-bold py-4 rounded-xl transition-all">
-                        Organizar meu fiado grátis por 7 dias
+                        Organizar meu fiado grátis por 14 dias
                     </Link>
                 </div>
             </div>

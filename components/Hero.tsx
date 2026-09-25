@@ -24,7 +24,7 @@ export default function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-x-6 gap-y-4 items-center justify-center lg:justify-start">
                         <Link href="/cadastro" className="bg-white text-[#004b6b] hover:bg-cyan-50 active:scale-[0.98] font-semibold py-4 px-8 rounded-xl transition-all shadow-lg shadow-black/20">
-                            Testar 7 dias grátis
+                            Testar 14 dias grátis
                         </Link>
                         <a href="#como-funciona" className="text-slate-200 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors">
                             Ver como funciona

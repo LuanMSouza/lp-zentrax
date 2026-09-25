@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@type": "Offer",
       "price": "49.90",
       "priceCurrency": "BRL",
-      "description": "R$ 49,90 por mês (R$ 29,90 por mês no plano anual), com 7 dias de teste grátis"
+      "description": "R$ 49,90 por mês (R$ 29,90 por mês no plano anual), com 14 dias de teste grátis"
     }
   };
 

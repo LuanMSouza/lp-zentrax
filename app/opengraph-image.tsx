@@ -19,7 +19,7 @@ export default function OgImage() {
                     <span style={{ color: "#22d3ee" }}>Saiba quem te deve.</span>
                 </div>
                 <div style={{ fontSize: 32, color: "#cbd5e1", marginTop: 36, display: "flex" }}>
-                    Controle de fiado e cobrança pelo WhatsApp. 7 dias grátis.
+                    Controle de fiado e cobrança pelo WhatsApp. 14 dias grátis.
                 </div>
             </div>
         ),

@@ -9,6 +9,7 @@ import Nav from "@/components/Nav"
 import ParaQuem from "@/components/ParaQuem"
 import CtaFinal from "@/components/CtaFinal"
 import ProvaSocial from "@/components/ProvaSocial"
+import Depoimento from "@/components/Depoimento"
 import { useEffect } from "react"
 import { track } from "@/lib/tracking"
 
@@ -26,6 +27,7 @@ export default function Home() {
         <ProvaSocial />
         <Features />
         <HowItWorks />
+        <Depoimento />
         <ParaQuem />
         <Planos />
         <CtaFinal />

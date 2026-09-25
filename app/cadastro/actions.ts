@@ -9,6 +9,8 @@ export async function registrarEmpresa(formData: FormData) {
     const senha = formData.get("senha");
 
     const segmento = formData.get("segmento");
+    // WhatsApp opcional (o app valida e só repassa se for um número válido)
+    const whatsapp = formData.get("whatsapp") || undefined;
     // código de indicação (?ref=), vazio quando não veio de indicação
     const ref = formData.get("ref") || undefined;
 
@@ -26,6 +28,7 @@ export async function registrarEmpresa(formData: FormData) {
                 senha,
                 segmento,
                 ref,
+                whatsapp,
             }),
         });
 
