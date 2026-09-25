@@ -8,9 +8,10 @@ export default function Planos() {
                 <div className="bg-white/5 border border-cyan-400/25 rounded-3xl p-8 max-w-sm mx-auto shadow-xl shadow-cyan-500/10">
                     <span className="bg-cyan-500/10 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Plano Único</span>
                     <div className="mt-4 flex items-baseline justify-center">
-                        <span className="text-4xl font-extrabold text-white">R$ 49</span>
+                        <span className="text-4xl font-extrabold text-white">R$ 49,90</span>
                         <span className="text-slate-400 ml-1 text-lg">/mês</span>
                     </div>
+                    <p className="mt-2 text-sm text-slate-400">No plano anual sai por R$ 29,90/mês.</p>
 
                     <ul className="mt-8 space-y-4 text-left">
                         <li className="flex items-center text-slate-300">
