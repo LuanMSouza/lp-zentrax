@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
+import { track, cadastroIniciado, getRef } from "@/lib/tracking";
 import Image from "next/image";
 import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail, Tag } from "lucide-react";
 
@@ -9,43 +10,12 @@ export default function PageCadastro() {
     const [erro, setErro] = useState("");
     const [segmento, setSegmento] = useState("geral");
 
-    // 
-
-    const trackAccess = () => {
-        const params = new URLSearchParams(window.location.search);
-
-        const payload = JSON.stringify({
-            projeto_nome: 'ZentraX-Cadastro',
-            pagina_path: window.location.pathname,
-            url_completa: window.location.href,
-            referrer: document.referrer || 'direto',
-            utm_source: params.get('utm_source') || null,
-            utm_medium: params.get('utm_medium') || null,
-            largura_tela: window.innerWidth,
-            idioma: navigator.language,
-            user_agent: navigator.userAgent,
-        });
-
-        const url = "https://api.analitcs.dvls.com.br/api/track";
-
-        if (navigator.sendBeacon) {
-            const blob = new Blob([payload], { type: 'application/json' });
-            navigator.sendBeacon(url, blob);
-        } else {
-            fetch(url, {
-                method: 'POST',
-                body: payload,
-                headers: { 'Content-Type': 'application/json' },
-                keepalive: true // Garante que a requisição termine mesmo se sair da página
-            }).catch(() => { }); // Falha silenciosa
-        }
-    };
+    const [ref, setRef] = useState("");
 
     useEffect(() => {
-        trackAccess()
+        track('ZentraX-Cadastro');
+        setRef(getRef() || "");
     }, [])
-
-    // 
 
     async function clientAction(formData: FormData) {
         setLoading(true);
@@ -163,6 +133,7 @@ export default function PageCadastro() {
                                             type="email"
                                             placeholder="Seu melhor e-mail"
                                             required
+                                            onBlur={(e) => { if (e.currentTarget.validity.valid && e.currentTarget.value) cadastroIniciado(e.currentTarget.value); }}
                                             className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 transition-all"
                                         />
                                     </div>
@@ -178,6 +149,11 @@ export default function PageCadastro() {
                                     </div>
                                 </div>
                             </div>
+
+                            <input type="hidden" name="ref" value={ref} />
+                            <p className="text-xs text-slate-400 text-center">
+                                Se você não terminar o cadastro, enviaremos um único lembrete por e-mail.
+                            </p>
 
                             <button
                                 type="submit"

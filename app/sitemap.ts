@@ -1,7 +1,22 @@
 import { MetadataRoute } from 'next'
+import { SEGMENTOS } from '@/lib/segmentos'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const paginasSegmento = SEGMENTOS.map(s => ({
+        url: `https://zentrax.dvls.com.br/para/${s.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
     return [
+        ...paginasSegmento,
+        {
+            url: 'https://zentrax.dvls.com.br/calculadora-fiado',
+            lastModified: new Date(),
+            changeFrequency: 'yearly' as const,
+            priority: 0.6,
+        },
         {
             url: 'https://zentrax.dvls.com.br',
             lastModified: new Date(),

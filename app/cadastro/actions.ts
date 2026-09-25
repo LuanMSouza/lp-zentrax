@@ -9,6 +9,8 @@ export async function registrarEmpresa(formData: FormData) {
     const senha = formData.get("senha");
 
     const segmento = formData.get("segmento");
+    // código de indicação (?ref=), vazio quando não veio de indicação
+    const ref = formData.get("ref") || undefined;
 
     try {
         const response = await fetch("https://api.devedores.dvls.com.br/adm/onboarding-publico", {
@@ -23,6 +25,7 @@ export async function registrarEmpresa(formData: FormData) {
                 email,
                 senha,
                 segmento,
+                ref,
             }),
         });
 
