@@ -36,7 +36,7 @@ const FEATURES: Feature[] = [
 // que o cliente mais quer) ocupa 2 colunas e a grade fecha em duas linhas cheias.
 export default function Features() {
     return (
-        <section id="funcionalidades" className="py-24 bg-slate-50 scroll-mt-16">
+        <section id="funcionalidades" className="pt-16 pb-24 bg-slate-50 scroll-mt-16">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="max-w-2xl mb-14">
                     <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 tracking-tight">

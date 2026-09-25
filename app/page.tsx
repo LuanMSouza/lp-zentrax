@@ -8,6 +8,7 @@ import Planos from "@/components/Planos"
 import Nav from "@/components/Nav"
 import ParaQuem from "@/components/ParaQuem"
 import CtaFinal from "@/components/CtaFinal"
+import ProvaSocial from "@/components/ProvaSocial"
 import { useEffect } from "react"
 import { track } from "@/lib/tracking"
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <ProvaSocial />
         <Features />
         <HowItWorks />
         <ParaQuem />
