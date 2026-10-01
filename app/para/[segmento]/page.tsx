@@ -48,6 +48,9 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                     <CtaCadastro hrefBase={cta} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
                         Começar teste grátis de 14 dias
                     </CtaCadastro>
+                    <a href="https://app.zentrax.dvls.com.br/demo" className="inline-block ml-0 sm:ml-4 mt-4 sm:mt-0 border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
+                        Ver demonstração
+                    </a>
                     <p className="text-sm text-slate-300 mt-3">Sem cartão de crédito e sem compromisso.</p>
                     {/* oferta de implantação: tira o maior medo desse público, que é começar do zero */}
                     <p className="text-sm text-slate-200 mt-4">

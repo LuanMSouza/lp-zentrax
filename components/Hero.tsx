@@ -26,8 +26,9 @@ export default function Hero() {
                         <Link href="/cadastro" className="bg-white text-[#004b6b] hover:bg-cyan-50 active:scale-[0.98] font-semibold py-4 px-8 rounded-xl transition-all shadow-lg shadow-black/20">
                             Testar 14 dias grátis
                         </Link>
-                        <a href="#como-funciona" className="text-slate-200 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors">
-                            Ver como funciona
+                        {/* demonstração pública: entra no app numa empresa de exemplo, sem cadastro (app /demo) */}
+                        <a href="https://app.zentrax.dvls.com.br/demo" className="border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
+                            Ver demonstração
                         </a>
                     </div>
                     <p className="text-sm text-slate-300/80 mt-4">Sem cartão de crédito. Cancele quando quiser.</p>
