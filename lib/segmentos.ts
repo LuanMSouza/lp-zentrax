@@ -68,6 +68,25 @@ export const SEGMENTOS: Segmento[] = [
     { slug: "gastronomia", descricao: "Encomendas com sinal, clientes fixos e empresas que pagam no fim do mês: controle o que cada cliente deve na sua doceria ou restaurante. Teste grátis por 14 dias.", plural: "docerias, restaurantes e pizzarias", quem: "dono de negócio de alimentação",
       dor: "encomendas com sinal, clientes fixos que pagam depois e empresas que pedem para acertar no fim do mês.",
       exemplos: ["Encomenda de festa com sinal pago e saldo a receber", "Cliente de empresa com pedidos somados no mês", "Cliente de confiança que leva agora e paga na próxima semana"] },
+    // comércio que vende fiado/a prazo de verdade — o público da prospecção do Maps (out/2026)
+    { slug: "distribuidoras-de-bebidas", descricao: "Bar e restaurante que compram a prazo, notas somando na semana e cobrança pelo WhatsApp: controle o fiado da distribuidora sem caderno. 14 dias grátis.", plural: "distribuidoras de bebidas", quem: "dono de distribuidora",
+      dor: "bar e restaurante que recebem a mercadoria hoje e acertam na semana que vem, com várias notas em aberto ao mesmo tempo.",
+      exemplos: ["Bar com 4 entregas na semana e nenhuma paga ainda", "Cliente que paga parte da nota e pede pra acertar o resto depois", "Saber, no fim do mês, quanto ainda tem na rua e de quem"] },
+    { slug: "adegas", descricao: "Cliente do bairro que leva a bebida e paga depois: saldo de cada um, há quantos dias deve e cobrança pelo WhatsApp. Controle o fiado da adega. 14 dias grátis.", plural: "adegas e depósitos de bebidas", quem: "dono de adega",
+      dor: "cliente conhecido do bairro que leva a cerveja na sexta e promete pagar no dia do pagamento.",
+      exemplos: ["Fiado de fim de semana que vira conta de mês inteiro", "Cliente que jura que já pagou e o caderno não confirma", "Vergonha de cobrar vizinho cara a cara"] },
+    { slug: "mercadinhos", descricao: "Fiado de mercadinho, mercearia e padaria sem caderninho: quem deve, quanto e desde quando, com cobrança pelo WhatsApp. Teste grátis por 14 dias.", plural: "mercadinhos, mercearias e padarias", quem: "dono de mercadinho",
+      dor: "a caderneta do balcão, com dezenas de clientes do bairro que compram no dia a dia e acertam no fim do mês.",
+      exemplos: ["Caderneta cheia de rasura, com conta somada à mão", "Cliente que só paga quando você lembra de cobrar", "Não saber quanto dinheiro está parado no fiado"] },
+    { slug: "depositos-de-gas-e-agua", descricao: "Botijão e galão entregues hoje e pagos depois: saldo por cliente, entregas a prazo e cobrança pelo WhatsApp. Controle o fiado do depósito. 14 dias grátis.", plural: "depósitos de gás e água", quem: "dono de depósito de gás",
+      dor: "entrega feita na hora da necessidade, com o cliente pedindo pra pagar no próximo pedido.",
+      exemplos: ["Entregador volta sem o dinheiro e ninguém anota", "Condomínio ou comércio que paga só no fim do mês", "Cliente com dois botijões em aberto pedindo o terceiro"] },
+    { slug: "acougues", descricao: "Cliente fixo que leva a carne e acerta no fim do mês: saldo de cada um, notas em aberto e cobrança pelo WhatsApp. Controle o fiado do açougue. 14 dias grátis.", plural: "açougues e casas de carne", quem: "dono de açougue",
+      dor: "cliente de anos que compra toda semana e acerta quando recebe, e restaurante que paga a prazo.",
+      exemplos: ["Compra de churrasco de fim de semana pendurada", "Restaurante que compra por semana e paga por mês", "Conta antiga que ficou esquecida no caderno"] },
+    { slug: "materiais-de-construcao", descricao: "Obra que leva material hoje e paga na medição: saldo por cliente e por obra, pagamento parcial e cobrança pelo WhatsApp. 14 dias grátis, sem cartão.", plural: "lojas de material de construção", quem: "dono de loja de material de construção",
+      dor: "pedreiro e cliente de obra levando material várias vezes por semana e pagando quando a obra anda.",
+      exemplos: ["Várias retiradas da mesma obra somando sem controle", "Cliente que paga uma parte e continua levando", "Pedreiro que pega material em nome do dono da obra"] },
 ];
 
 export const pegarSegmento = (slug: string) => SEGMENTOS.find(s => s.slug === slug);

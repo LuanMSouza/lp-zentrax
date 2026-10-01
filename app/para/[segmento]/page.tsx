@@ -61,6 +61,11 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                         ))}
                     </ul>
 
+                    <blockquote className="rounded-2xl bg-cyan-50 border border-cyan-200 p-6 mb-12 text-slate-700">
+                        <p className="mb-2">&ldquo;Criei o ZentraX pro meu pai, que tem uma distribuidora de bebidas e vende a prazo pra bar e restaurante. Ele usa no dia a dia, e agora qualquer comércio pode usar também.&rdquo;</p>
+                        <footer className="text-sm font-semibold text-[#004b6b]">Luan, criador do ZentraX</footer>
+                    </blockquote>
+
                     <h2 className="text-2xl font-bold text-slate-900 mb-6">Como o ZentraX ajuda</h2>
                     <ul className="space-y-3 mb-12 text-slate-700">
                         <li><strong>Saldo de cada cliente à mão.</strong> Veja em segundos quem deve e quanto.</li>
