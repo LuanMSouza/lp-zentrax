@@ -27,7 +27,7 @@ export default function Hero() {
                             Testar 14 dias grátis
                         </Link>
                         {/* demonstração pública: entra no app numa empresa de exemplo, sem cadastro (app /demo) */}
-                        <a href="https://app.zentrax.dvls.com.br/demo" className="border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
+                        <a href="https://app.zentrax.dvls.com.br/demo?utm_source=lp&utm_campaign=home" className="border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
                             Ver demonstração
                         </a>
                     </div>
