@@ -49,6 +49,12 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                         Começar teste grátis de 14 dias
                     </CtaCadastro>
                     <p className="text-sm text-slate-300 mt-3">Sem cartão de crédito e sem compromisso.</p>
+                    {/* oferta de implantação: tira o maior medo desse público, que é começar do zero */}
+                    <p className="text-sm text-slate-200 mt-4">
+                        Tem tudo num caderno? Manda uma foto que eu cadastro seus clientes pra você.{" "}
+                        <a href="https://wa.me/5513998087787?text=Oi%20Luan%2C%20vi%20o%20ZentraX%20e%20quero%20que%20voc%C3%AA%20cadastre%20meus%20clientes"
+                            className="font-semibold text-cyan-300 underline" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                    </p>
                 </div>
             </section>
 
