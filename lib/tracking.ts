@@ -1,9 +1,7 @@
-// Tracking compartilhado da LP. Fala com o analytics self-hosted
-// (api.analitcs.dvls.com.br) e guarda `lid` (lead do e-mail de convite) e
-// `ref` (código de indicação) na sessão pra sobreviverem à navegação
-// LP → /cadastro. Tudo fire-and-forget: nunca pode quebrar a página.
-
-const ANALYTICS_URL = "https://api.analitcs.dvls.com.br/api/track";
+// Parâmetros da LP: guarda `lid` (lead do e-mail de convite) e `ref` (código de
+// indicação) na sessão pra sobreviverem à navegação LP → /cadastro. As visitas em si
+// são contadas pelo rastreador único do painel (script em app/layout.tsx), que também
+// lê o ?lid=. Tudo fire-and-forget: nunca pode quebrar a página.
 
 function guardar(chave: string, valor: string | null) {
     try {
@@ -26,34 +24,11 @@ export function getRef(): string | null {
     return ler("zx_ref");
 }
 
-export function track(projeto: string) {
-    const params = new URLSearchParams(window.location.search);
-    getRef(); // só pra persistir o ?ref= mesmo em páginas que não usam
-    const payload = JSON.stringify({
-        projeto_nome: projeto,
-        pagina_path: window.location.pathname,
-        url_completa: window.location.href,
-        referrer: document.referrer || "direto",
-        utm_source: params.get("utm_source") || null,
-        utm_medium: params.get("utm_medium") || null,
-        // campanha (ex.: slug da página de segmento no SEO) — permite atribuir cada cadastro à página de origem
-        utm_campaign: params.get("utm_campaign") || null,
-        lid: getLid(),
-        largura_tela: window.innerWidth,
-        idioma: navigator.language,
-        user_agent: navigator.userAgent,
-    });
-
-    try {
-        if (navigator.sendBeacon) {
-            navigator.sendBeacon(ANALYTICS_URL, new Blob([payload], { type: "application/json" }));
-        } else {
-            fetch(ANALYTICS_URL, {
-                method: "POST", body: payload, keepalive: true,
-                headers: { "Content-Type": "application/json" },
-            }).catch(() => { });
-        }
-    } catch { /* ignora */ }
+// guarda ?lid= e ?ref= na sessão logo que a pessoa chega (qualquer página), pra
+// chegarem até o /cadastro mesmo navegando antes
+export function lembrarParametros() {
+    getLid();
+    getRef();
 }
 
 // avisa o backend que a pessoa começou o cadastro (usado só pro lembrete único)

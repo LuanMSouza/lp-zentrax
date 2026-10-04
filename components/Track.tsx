@@ -1,9 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import { track } from "@/lib/tracking";
+import { lembrarParametros } from "@/lib/tracking";
 
-// pageview beacon pra páginas server-rendered (segmento, calculadora)
-export default function Track({ projeto = "ZentraX-LP" }: { projeto?: string }) {
-    useEffect(() => { track(projeto); }, [projeto]);
+// guarda ?lid=/?ref= nas páginas server-rendered (segmento); a contagem de visitas
+// é do rastreador único em app/layout.tsx
+export default function Track() {
+    useEffect(() => { lembrarParametros(); }, []);
     return null;
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { track } from "@/lib/tracking";
+import { lembrarParametros } from "@/lib/tracking";
 
 // Calculadora simples: dá uma noção do dinheiro parado no fiado. As contas são
 // só aritmética sobre o que a pessoa digita, sem número de mercado inventado.
@@ -12,7 +12,7 @@ export default function CalculadoraFiado() {
     const [pctFiado, setPctFiado] = useState("20");
     const [pctAtraso, setPctAtraso] = useState("10");
 
-    useEffect(() => { track("ZentraX-LP"); }, []);
+    useEffect(() => { lembrarParametros(); }, []);
 
     const fat = parseFloat(faturamento.replace(",", ".")) || 0;
     const noFiado = fat * (Math.min(Math.max(parseFloat(pctFiado) || 0, 0), 100) / 100);

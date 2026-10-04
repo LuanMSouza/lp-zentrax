@@ -11,12 +11,12 @@ import CtaFinal from "@/components/CtaFinal"
 import ProvaSocial from "@/components/ProvaSocial"
 import Depoimento from "@/components/Depoimento"
 import { useEffect } from "react"
-import { track } from "@/lib/tracking"
+import { lembrarParametros } from "@/lib/tracking"
 
 export default function Home() {
 
   useEffect(() => {
-    track('ZentraX-LP')
+    lembrarParametros()
   }, [])
 
   return (

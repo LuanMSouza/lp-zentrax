@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
-import { track, cadastroIniciado, getRef } from "@/lib/tracking";
+import { cadastroIniciado, getRef } from "@/lib/tracking";
 import Image from "next/image";
 import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail, Tag } from "lucide-react";
 
@@ -13,7 +13,6 @@ export default function PageCadastro() {
     const [ref, setRef] = useState("");
 
     useEffect(() => {
-        track('ZentraX-Cadastro');
         setRef(getRef() || "");
     }, [])
 

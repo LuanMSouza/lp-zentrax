@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -84,6 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        {/* rastreador único do painel de leads (visitas, seções, cliques, gente x robô) */}
+        <Script src="https://api.leads.dvls.com.br/rastreio.js" data-site="zentrax-lp" strategy="afterInteractive" />
       </body>
     </html>
   );
