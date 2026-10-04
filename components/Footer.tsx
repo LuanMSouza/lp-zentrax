@@ -44,24 +44,21 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Coluna 4: Desenvolvedor (LS Dev) */}
+                    {/* Coluna 4: Desenvolvido pela DVLS — ?l=zentrax: o clique aparece com essa
+                        origem no analytics do painel (aba Site DVLS) */}
                     <div className="flex flex-col items-start md:items-end">
                         <p className="text-slate-400 text-[10px] mb-2 uppercase tracking-[0.2em] font-medium">
                             Desenvolvido por
                         </p>
-                        <div className="flex items-center gap-3 group">
-                            <div className="relative w-8 h-8 rounded-md overflow-hidden bg-slate-800 border border-white/10 group-hover:border-cyan-500/50 transition-colors">
-                                <Image
-                                    src="/Logo dark-padrao.png"
-                                    alt="LS Dev Logo"
-                                    fill
-                                    className="object-cover scale-110"
-                                />
-                            </div>
-                            <span className="font-bold text-lg tracking-tighter group-hover:text-cyan-400 transition-colors">
-                                LUAN SOUZA <span className="text-cyan-400">DEV</span>
+                        <a href="https://dvls.com.br/?l=zentrax" target="_blank" rel="noopener"
+                            className="group flex flex-col items-start md:items-end">
+                            <span className="font-bold text-lg tracking-[0.15em] group-hover:text-cyan-400 transition-colors">
+                                DV<span className="text-[#7F77DD]">L</span>S
                             </span>
-                        </div>
+                            <span className="text-slate-400 text-xs group-hover:text-slate-300 transition-colors">
+                                Estúdio de sites · dvls.com.br
+                            </span>
+                        </a>
                     </div>
                 </div>
 
