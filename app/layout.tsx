@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Luan Souza Dev" }],
   creator: "LS Dev",
   publisher: "ZentraX SaaS",
+  alternates: {
+    canonical: "./", // resolve para a URL de cada página (páginas com canonical próprio sobrescrevem)
+  },
   robots: {
     index: true,
     follow: true,
