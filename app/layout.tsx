@@ -25,9 +25,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Luan Souza Dev" }],
   creator: "LS Dev",
   publisher: "ZentraX SaaS",
-  alternates: {
-    canonical: "https://zentrax.dvls.com.br", // Evita conteúdo duplicado
-  },
   robots: {
     index: true,
     follow: true,

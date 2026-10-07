@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from "next"
 import HowItWorks from "@/components/HowItWorks"
 import Features from "../components/Features"
 import Hero from "../components/Hero"
@@ -12,6 +13,10 @@ import ProvaSocial from "@/components/ProvaSocial"
 import Depoimento from "@/components/Depoimento"
 import { useEffect } from "react"
 import { lembrarParametros } from "@/lib/tracking"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+}
 
 export default function Home() {
 

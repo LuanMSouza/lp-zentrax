@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Política de Privacidade",
+    alternates: { canonical: "/privacidade" },
 };
 
 export default function PoliticaDePrivacidade() {
