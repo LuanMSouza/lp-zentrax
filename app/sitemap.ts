@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
         ...paginasSegmento,
         {
+            url: 'https://zentrax.dvls.com.br/planilha-fiado',
+            lastModified: new Date(),
+            changeFrequency: 'yearly' as const,
+            priority: 0.6,
+        },
+        {
             url: 'https://zentrax.dvls.com.br/calculadora-fiado',
             lastModified: new Date(),
             changeFrequency: 'yearly' as const,
