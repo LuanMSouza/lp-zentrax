@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Track from "@/components/Track";
 import Nav from "@/components/Nav";
 import CtaCadastro from "@/components/CtaCadastro";
+import CtaCaderno from "@/components/CtaCaderno";
 import { SEGMENTOS, pegarSegmento } from "@/lib/segmentos";
 
 export const dynamicParams = false;
@@ -45,18 +46,17 @@ export default async function PaginaSegmento({ params }: { params: Promise<{ seg
                     <p className="text-lg text-slate-200 mb-10">
                         No dia a dia de {s.plural}, o fiado costuma ser {s.dor} O ZentraX mostra quanto cada cliente deve, quando vence e permite cobrar pelo WhatsApp em segundos.
                     </p>
-                    <CtaCadastro hrefBase={cta} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
-                        Começar teste grátis de 14 dias
-                    </CtaCadastro>
+                    <CtaCaderno origem={s.slug} className="inline-block bg-white text-[#004b6b] hover:bg-cyan-50 font-bold py-4 px-8 rounded-xl transition-all shadow-lg">
+                        Mandar foto do caderno
+                    </CtaCaderno>
                     <a href={`https://app.zentrax.dvls.com.br/demo?utm_source=lp&utm_campaign=${s.slug}`} className="inline-block ml-0 sm:ml-4 mt-4 sm:mt-0 border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
                         Ver demonstração
                     </a>
-                    <p className="text-sm text-slate-300 mt-3">Sem cartão de crédito e sem compromisso.</p>
                     {/* oferta de implantação: tira o maior medo desse público, que é começar do zero */}
-                    <p className="text-sm text-slate-200 mt-4">
-                        Tem tudo num caderno? Manda uma foto que eu cadastro seus clientes pra você.{" "}
-                        <a href="https://wa.me/5513998087787?text=Oi%20Luan%2C%20vi%20o%20ZentraX%20e%20quero%20que%20voc%C3%AA%20cadastre%20meus%20clientes"
-                            className="font-semibold text-cyan-300 underline" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                    <p className="text-sm text-slate-200 mt-4">Tem tudo num caderno? Me manda uma foto no WhatsApp que eu cadastro seus clientes pra você. São 14 dias grátis, sem cartão.</p>
+                    <p className="text-sm text-slate-300 mt-2">
+                        Prefere fazer sozinho?{" "}
+                        <CtaCadastro hrefBase={cta} className="underline hover:text-white">Criar minha conta</CtaCadastro>
                     </p>
                 </div>
             </section>

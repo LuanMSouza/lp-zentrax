@@ -1,6 +1,7 @@
 // components/Hero.tsx
 import Image from 'next/image';
 import Link from 'next/link';
+import CtaCaderno from './CtaCaderno';
 
 export default function Hero() {
     return (
@@ -23,15 +24,16 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-x-6 gap-y-4 items-center justify-center lg:justify-start">
-                        <Link href="/cadastro" className="bg-white text-[#004b6b] hover:bg-cyan-50 active:scale-[0.98] font-semibold py-4 px-8 rounded-xl transition-all shadow-lg shadow-black/20">
-                            Testar 14 dias grátis
-                        </Link>
+                        <CtaCaderno origem="home" className="bg-white text-[#004b6b] hover:bg-cyan-50 active:scale-[0.98] font-semibold py-4 px-8 rounded-xl transition-all shadow-lg shadow-black/20">
+                            Mandar foto do caderno
+                        </CtaCaderno>
                         {/* demonstração pública: entra no app numa empresa de exemplo, sem cadastro (app /demo) */}
                         <a href="https://app.zentrax.dvls.com.br/demo?utm_source=lp&utm_campaign=home" className="border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-all">
                             Ver demonstração
                         </a>
                     </div>
-                    <p className="text-sm text-slate-300/80 mt-4">Sem cartão de crédito. Cancele quando quiser.</p>
+                    <p className="text-sm text-slate-200 mt-4 max-w-xl mx-auto lg:mx-0">Me manda uma foto do caderno no WhatsApp que eu cadastro seus clientes pra você. São 14 dias grátis, sem cartão.</p>
+                    <p className="text-sm text-slate-300/80 mt-2">Prefere fazer sozinho? <Link href="/cadastro" className="underline hover:text-white">Criar minha conta</Link></p>
                 </div>
 
                 {/* A Mágica do Overflow está aqui */}

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { registrarEmpresa } from "./actions";
 import { cadastroIniciado, getRef } from "@/lib/tracking";
 import Image from "next/image";
+import { WHATS_CADERNO } from "@/components/CtaCaderno";
 import { Building2, User, ShieldCheck, ArrowRight, Loader2, Dog, Mail, Tag } from "lucide-react";
 
 export default function PageCadastro() {
@@ -47,6 +48,9 @@ export default function PageCadastro() {
                         Comece sua jornada <span className="text-cyan-400">ZentraX</span>
                     </h1>
                     <p className="text-slate-400 mt-2">14 dias grátis • Sem cartão de crédito</p>
+                    <p className="text-slate-300 text-sm mt-3">
+                        Tem tudo num caderno? <a href={WHATS_CADERNO("cadastro")} target="_blank" rel="noopener" className="text-cyan-300 underline font-semibold">Me manda uma foto</a> que eu cadastro seus clientes pra você.
+                    </p>
                 </div>
 
                 <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden">
