@@ -1,4 +1,4 @@
-import { MessageSquare, LayoutDashboard, History, CheckCircle, Users } from 'lucide-react';
+import { MessageSquare, Printer, Smartphone, BarChart3, IdCard, Wallet, CheckCircle, ShieldCheck } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 type Feature = { icon: ReactNode; title: string; description: string; destaque?: boolean };
@@ -6,9 +6,34 @@ type Feature = { icon: ReactNode; title: string; description: string; destaque?:
 const FEATURES: Feature[] = [
     {
         icon: <MessageSquare size={24} />,
-        title: "Cobrança pelo WhatsApp",
-        description: "Escolha entre 4 modelos de mensagem. O sistema preenche o nome e o valor do cliente e você envia em um clique.",
+        title: "Cobrança pelo WhatsApp, com Pix",
+        description: "O ZentraX monta a mensagem com o nome do cliente, o valor e o Pix copia e cola. Você cobra os atrasados um atrás do outro e lembra quem combinou de pagar hoje.",
         destaque: true,
+    },
+    {
+        icon: <Printer size={22} />,
+        title: "Comprovante na térmica",
+        description: "Mostra quanto ele devia, quanto pagou, quais notas abateu e o QR do Pix com o que falta. Sai com a logo da sua loja.",
+    },
+    {
+        icon: <Smartphone size={22} />,
+        title: "Extrato no celular do cliente",
+        description: "Você manda um link e o cliente vê as notas dele. Não precisa de login nem de app.",
+    },
+    {
+        icon: <BarChart3 size={22} />,
+        title: "Relatórios",
+        description: "Quem mais compra, quem mais paga, quem demora e quem sumiu. Todo dia 1º o resumo do mês chega no seu e-mail.",
+    },
+    {
+        icon: <IdCard size={22} />,
+        title: "Ficha do cliente",
+        description: "Limite de fiado, aniversário, observações e quantos dias ele costuma levar pra pagar.",
+    },
+    {
+        icon: <Wallet size={22} />,
+        title: "Fechamento do caixa",
+        description: "Quanto entrou no dia em dinheiro, Pix e cartão. Dá pra conferir na tela ou imprimir.",
     },
     {
         icon: <CheckCircle size={22} />,
@@ -16,24 +41,14 @@ const FEATURES: Feature[] = [
         description: "Um pagamento avulso abate as notas mais antigas primeiro, e o saldo de quem pagou só uma parte fica certo.",
     },
     {
-        icon: <LayoutDashboard size={22} />,
-        title: "Controle de notas",
-        description: "Lance pedidos e acompanhe o saldo restante de cada um. Edite quando precisar e veja o total devedor.",
-    },
-    {
-        icon: <History size={22} />,
-        title: "Histórico de alterações",
-        description: "Veja quem cadastrou, alterou ou excluiu cada cliente, pagamento ou nota.",
-    },
-    {
-        icon: <Users size={22} />,
+        icon: <ShieldCheck size={22} />,
         title: "Equipe com permissões",
-        description: "Perfis de gestor e de usuário, para cada pessoa fazer só o que deve.",
+        description: "Você decide o que cada atendente pode ver e fazer, e o histórico mostra quem fez o quê.",
     },
 ];
 
-// Bento em vez de 5 cards iguais numa grade 3+2: o destaque (WhatsApp, que é o
-// que o cliente mais quer) ocupa 2 colunas e a grade fecha em duas linhas cheias.
+// Bento: o destaque (WhatsApp, que é o que o cliente mais quer) ocupa 2 colunas; com mais 7 cards a grade fecha
+// em três linhas cheias (2+1, 3, 3). Mudou a quantidade? Confere se a última linha não fica com buraco.
 export default function Features() {
     return (
         <section id="funcionalidades" className="pt-16 pb-24 bg-slate-50 scroll-mt-16">
